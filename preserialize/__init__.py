@@ -156,7 +156,8 @@ class InstanceDeconstructor(Deconstructor):
     """Deconstructor for a class instance. Uses ``vars()``."""
 
     def deconstruct(self, obj):
-        return None, vars(obj)
+        return None, dict((key, value) for key, value in vars(obj).items()
+                          if key not in self.ignore)
 
     def setattr(self, obj, key, value):
         vars(obj)[key] = value
