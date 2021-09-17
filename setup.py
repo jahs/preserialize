@@ -22,7 +22,7 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='2017.7',
+    version='2017.7.1',
 
     description='Customisable, stackless, cyclic object graph pre-serialization.',
     long_description=long_description,
